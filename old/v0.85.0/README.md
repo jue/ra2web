@@ -1,6 +1,6 @@
-# 网页红井测试版一键部署
+# 网页版红色警戒测试版一键部署
 
-网页红警一键部署包/chronodivide asssets。网页红井（网页版“红警”/Chronodivide）预览版测试站点，帮助各类爱好者一键搭建自己的网页版“红警”站点.
+网页红警一键部署包/chronodivide asssets。网页版红色警戒（网页版“红警”/Chronodivide）预览版测试站点，帮助各类爱好者一键搭建自己的网页版“红警”站点.
 
 Web-based Red Alert one-click deployment package / Chronodivide assets.
 Webpage Well is a preview test site of “Web-based Red Alert” / Chronodivide, designed to help enthusiasts of all kinds quickly set up their own web “Red Alert” site with one click.
@@ -32,18 +32,16 @@ For commercial authorization, please contact the copyright holder first to obtai
 
 ### Github托管页面
 
-fork该项目，命名为 你的名字.github.io，例如 ra2web.github.io
+fork该项目，命名为 你的名字.github.io，例如 ra2web.nipao.com
 
-正如你所见，这个项目的名字就符合这个域名规则。那么，此时的你可以访问 https://ra2web.github.io 来游玩网页红井拉
+正如你所见，这个项目的名字就符合这个域名规则。那么，此时的你可以访问 https://ra2web.nipao.com来游玩网页版红色警戒拉
 
-当前本项目同样可以通过github pages访问，地址就是 https://ra2web.github.io
+当前本项目同样可以通过github pages访问，地址就是 https://ra2web.nipao.com
 
 ### 腾讯云EdgeOne Pages
 
-[![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https%3A%2F%2Fgithub.com%2Fra2web%2Fra2web.github.io)
+[![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https%3A%2F%2Fgithub.com%2Fjue%2Fra2web)
 
 ### Vercel
 
-[![一键部署到Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ra2web/ra2web.github.io)
-
-
+[![一键部署到Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/jue/ra2web)
