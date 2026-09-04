@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>关注微信公众号「项码士」- 网页版红色警戒</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #111;
+        color: #ffe566;
+        font: 16px/1.6 'Fira Sans Condensed', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      }
+      main {
+        max-width: 640px;
+        margin: 10vh auto 0;
+        padding: 0 24px 48px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 1.4;
+      }
+      .account-name {
+        color: #4cd964;
+        font-weight: bold;
+      }
+      ol {
+        padding-left: 24px;
+      }
+      ol li {
+        margin: 10px 0;
+      }
+      .search-box {
+        display: inline-block;
+        margin: 4px 0;
+        padding: 2px 10px;
+        border: 1px solid #ffe566;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .qrcode-section {
+        display: none;
+        margin: 24px 0;
+        text-align: center;
+      }
+      .qrcode-section img {
+        width: 220px;
+        height: 220px;
+        background: #fff;
+        padding: 8px;
+        border-radius: 8px;
+      }
+      .tips {
+        margin-top: 24px;
+        padding: 16px;
+        background: #1c1c1c;
+        border-radius: 8px;
+      }
+      .tips p {
+        margin: 6px 0;
+      }
+      a {
+        color: #7ec8ff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>关注微信公众号「<span class="account-name">项码士</span>」</h1>
+      <p>「项码士」是网页版红色警戒的官方公众号，获取游玩指南、资源下载和问题反馈都请先关注。</p>
+
+      <ol>
+        <li>打开微信，点击右上角「+」→「添加朋友」；</li>
+        <li>选择「公众号」，进入搜索页面；</li>
+        <li>在搜索框输入：<span class="search-box">项码士</span></li>
+        <li>认准公众号「项码士」，点击「关注公众号」即可。</li>
+      </ol>
+
+      <div class="qrcode-section" id="qrcode-section">
+        <p>也可以用微信「扫一扫」，扫描下方二维码直接关注：</p>
+        <img id="qrcode-img" src="" alt="微信公众号「项码士」二维码" />
+      </div>
+
+      <div class="tips">
+        <p><strong>关注后你可以获得：</strong></p>
+        <p>· 网页版红色警戒游玩指南与常见问题解决方法；</p>
+        <p>· 游戏完全体副本的获取方式；</p>
+        <p>· 问题反馈渠道与版本更新公告。</p>
+      </div>
+    </main>
+    <script>
+      // 把公众号二维码图片放到网站目录（例如 /assets/wechat-qrcode.png），
+      // 并把下一行改成对应路径，页面会自动显示二维码区域；留空则只显示搜索步骤。
+      var WECHAT_QR_IMAGE = '';
+
+      if (WECHAT_QR_IMAGE) {
+        document.getElementById('qrcode-img').src = WECHAT_QR_IMAGE;
+        document.getElementById('qrcode-section').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
