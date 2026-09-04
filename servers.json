@@ -6,11 +6,11 @@
       "available": true,
       "gameVersion": "0.86.5",
       "wolUrl": "wss://wol.bj1.k0s.cn/wol",
-      "apiRegUrl": "https://wol.bj1.k0s.cn/register",
+      "apiRegUrl": "/proxy/wol-bj1/register",
       "clientIncidentUrl": "https://telemetry.bj1.wangerhuoda.cn/client-incidents",
-      "wladderUrl": "https://wol.bj1.wangerhuoda.cn/ladder",
-      "wgameresUrl": "https://wol.bj1.wangerhuoda.cn/wgameres",
-      "mapTransferUrl": "https://wol.bj1.wangerhuoda.cn/map-transfer"
+      "wladderUrl": "/proxy/wol-bj1/ladder",
+      "wgameresUrl": "/proxy/wol-bj1/wgameres",
+      "mapTransferUrl": "/proxy/wol-bj1/map-transfer"
     },
     {
       "id": "ENGGER",
@@ -19,11 +19,11 @@
       "gameVersion": "0.86.5",
       "wolUrl": "wss://wol.flkf.k0s.cn/wol",
       "webTransportWolUrl": "https://wol.flkf.k0s.cn/wol-webtransport",
-      "apiRegUrl": "https://wol.flkf.k0s.cn/register",
+      "apiRegUrl": "/proxy/wol-flkf/register",
       "clientIncidentUrl": "https://telemetry.bj1.k0s.cn/client-incidents",
-      "wladderUrl": "https://wol.flkf.k0s.cn/ladder",
-      "wgameresUrl": "https://wol.flkf.k0s.cn/wgameres",
-      "mapTransferUrl": "https://wol.flkf.k0s.cn/map-transfer"
+      "wladderUrl": "/proxy/wol-flkf/ladder",
+      "wgameresUrl": "/proxy/wol-flkf/wgameres",
+      "mapTransferUrl": "/proxy/wol-flkf/map-transfer"
     }
   ]
 }

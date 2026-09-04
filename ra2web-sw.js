@@ -44,7 +44,7 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  if (url.pathname.startsWith("/old/")) return;
+  if (url.pathname.startsWith("/old/") || url.pathname.startsWith("/proxy/")) return;
 
   if (request.mode === "navigate") {
     event.respondWith(networkFirst(request, RA2WEB_APP_CACHE));
