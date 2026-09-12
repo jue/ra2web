@@ -10,6 +10,13 @@
 //   wol-bj1  -> https://wol.bj1.wangerhuoda.cn  CHN2 区 API（register/ladder/wgameres/map-transfer）
 //   wol-flkf -> https://wol.flkf.k0s.cn         ENGGER 区 API
 // 注意：WebSocket 联机（wss://wol.../wol）无法经边缘函数代理，保持直连。
+//
+// 特例：LOCAL_FILES 中的路径不回源上游，改取本站静态文件（静态路径不经过
+// 本函数，同源 fetch 不会造成循环）。
+const LOCAL_FILES = {
+  // 主菜单开场视频：游戏向 CDN 基地址请求 ra2ts_l.mp4，改用仓库内置的 webm 版。
+  "/proxy/gameres2/ra2ts_l.mp4": "/assets/ra2ts_l.webm",
+};
 
 const UPSTREAMS = {
   gameres: "https://werhd.k0s.cn",
@@ -34,6 +41,8 @@ function corsPreflight() {
 }
 
 function buildUpstreamUrl(url) {
+  const localPath = LOCAL_FILES[url.pathname];
+  if (localPath) return new URL(localPath, url.origin).toString();
   const prefix = "/proxy/";
   if (!url.pathname.startsWith(prefix)) return null;
   const rest = url.pathname.slice(prefix.length);
