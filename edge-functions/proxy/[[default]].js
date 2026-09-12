@@ -11,11 +11,12 @@
 //   wol-flkf -> https://wol.flkf.k0s.cn         ENGGER 区 API
 // 注意：WebSocket 联机（wss://wol.../wol）无法经边缘函数代理，保持直连。
 //
-// 特例：LOCAL_FILES 中的路径不回源上游，改取本站静态文件（静态路径不经过
-// 本函数，同源 fetch 不会造成循环）。
+// 特例：LOCAL_FILES 中的路径（tag 之后的文件部分）不回源上游，改取本站
+// 静态文件（静态路径不经过本函数，同源 fetch 不会造成循环）。
 const LOCAL_FILES = {
   // 主菜单开场视频：游戏向 CDN 基地址请求 ra2ts_l.mp4，改用仓库内置的 webm 版。
   "/ra2ts_l.mp4": "/assets/ra2ts_l.webm",
+  "/proxy/gameres/ra2ts_l.mp4": "/assets/ra2ts_l.webm",
 };
 
 const UPSTREAMS = {
@@ -41,16 +42,16 @@ function corsPreflight() {
 }
 
 function buildUpstreamUrl(url) {
-  const localPath = LOCAL_FILES[url.pathname];
-  if (localPath) return new URL(localPath, url.origin).toString();
   const prefix = "/proxy/";
   if (!url.pathname.startsWith(prefix)) return null;
   const rest = url.pathname.slice(prefix.length);
   const slash = rest.indexOf("/");
   const tag = slash === -1 ? rest : rest.slice(0, slash);
+  const path = slash === -1 ? "/" : rest.slice(slash);
+  const localPath = LOCAL_FILES[path];
+  if (localPath) return new URL(localPath, url.origin).toString();
   const upstreamBase = UPSTREAMS[tag];
   if (!upstreamBase) return null;
-  const path = slash === -1 ? "/" : rest.slice(slash);
   return upstreamBase + path + url.search;
 }
 
