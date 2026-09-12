@@ -15,7 +15,7 @@
 // 本函数，同源 fetch 不会造成循环）。
 const LOCAL_FILES = {
   // 主菜单开场视频：游戏向 CDN 基地址请求 ra2ts_l.mp4，改用仓库内置的 webm 版。
-  "/proxy/gameres2/ra2ts_l.mp4": "/assets/ra2ts_l.webm",
+  "/ra2ts_l.mp4": "/assets/ra2ts_l.webm",
 };
 
 const UPSTREAMS = {
